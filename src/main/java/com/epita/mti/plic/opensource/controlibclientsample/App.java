@@ -29,5 +29,8 @@ public class App
       data.setY(Integer.parseInt(pair[1]));
       sender.send(data);
     }
+    sender.disposeStream();
+    in.close();
+    socket.close();
   }
 }
