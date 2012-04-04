@@ -23,8 +23,10 @@ public class App
     while ((s = in.readLine()) != null && s.length() != 0)
     {
       CLPressure data = new CLPressure();
+      String[] pair = s.split(";");
       
-      data.setX(Integer.parseInt(s));
+      data.setX(Integer.parseInt(pair[0]));
+      data.setY(Integer.parseInt(pair[1]));
       sender.send(data);
     }
   }
